@@ -4,7 +4,7 @@ html {
   font-size: 10px;
 }
 body {
-  background-color: #f5f9ff;  
+  background-color: #f5f9ff;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -43,9 +43,29 @@ h1 img {
   clear: both;
 }
 
+button {
+  border: 1px solid #206bef;
+  background: #ffffff;
+  transition: all ease-in-out 0.3s;
+  color: #206bef;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0.2rem 1rem;
+
+}
+
+button:hover, button:active, button.active  {
+  background: #206bef;
+  color: #ffffff;
+}
+
+button:hover {
+  box-shadow: 0 0 5px rgba(32, 107,239, 0.5);
+}
+
 @media (min-width: 1500px) {
   html {
-    font-size: 12px;    
+    font-size: 12px;
   }
 }
 

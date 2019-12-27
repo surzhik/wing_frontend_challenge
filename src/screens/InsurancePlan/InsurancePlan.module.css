@@ -1,0 +1,156 @@
+.plansHolder {
+    margin-top: 5rem;
+    display: flex;
+}
+
+.planBox {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+
+}
+
+.firstPart {
+    min-height: 210px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #fff;
+}
+
+.firstPart > div  {
+    flex: 1 1 auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.firstPart > div:nth-child(2) {
+    color: #999999;
+    justify-content: center;
+}
+.firstPart > div:nth-child(3) {
+    font-size: 12px;
+    color: #206bef;
+}
+.firstPart > div:nth-child(3) button {
+    margin-top: 0.2rem;
+    display: block;
+    max-width: 112px;
+    width: 100%;
+    height: 32px;
+
+}
+
+.firstPart h4 {
+    font-size: 21px;
+}
+.secondPart {
+    background: #c6c9d3;
+    display: flex;
+    flex-direction: column;
+    min-height: 255px;
+    flex: 1 1;
+}
+
+
+.secondPart > div {
+    display: flex;
+    flex-direction: column;
+    color: #49577e;
+    font-size: 13px;
+    font-weight: bolder;
+    padding: 20px;
+}
+.secondPart  > div:first-child {
+    flex: 1 1 auto;
+}
+.secondPart > div:last-child {
+    height: 80px;
+    border-top: 1px solid #eaeaeb;
+}
+
+.secondPart ul {
+    font-size: 14px;
+    padding: 0 0 0 20px;
+    margin: 1rem 0 0 0;
+    list-style: none;
+}
+
+.secondPart ul li {
+    position: relative;
+}
+.secondPart ul li:before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 12px;
+    width: 16px;
+    left: -20px;
+    top: 2px;
+    background: url("./img/checkmark.svg") no-repeat;
+    background-size: contain;
+
+}
+
+.planBox:nth-child(2) {
+    width: 36%;
+}
+
+.planBox:nth-child(2) {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    margin-top: -25px;
+    margin-bottom: -5px;
+}
+
+.planBox:nth-child(2) .firstPart {
+    padding-top: 45px;
+    min-height: 240px;
+}
+
+.planBox:nth-child(2) .secondPart ul {
+    font-size: 15px;
+}
+
+.planPrice {
+    font-size: 18px;
+    color: #206bef;
+    font-weight: bold;
+}
+
+.star {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 34px;
+    height: 55px;
+    background: url("./img/star.svg") no-repeat;
+    background-size: contain;
+    z-index: 2;
+}
+
+.Back {
+    margin-top: 2rem;
+}
+
+@media (max-width: 767px) {
+    .plansHolder {
+      flex-direction: column;
+     margin: 0 15px;
+    }
+    .planBox,
+    .planBox:nth-child(2) {
+        width: auto;
+    }
+
+    .planBox + .planBox {
+        margin-top: 2rem;
+    }
+    .secondPart {
+       min-height: auto;
+    }
+}

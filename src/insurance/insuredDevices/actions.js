@@ -11,3 +11,10 @@ export const fetchFiltered = (params) => ({
   payload: { params },
 });
 
+export const createDevice = params => ({
+  type: types.CREATE,
+  payload: { params },
+  meta: {
+    thunk: true
+  }
+});

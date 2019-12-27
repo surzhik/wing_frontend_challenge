@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Subscription Subscription structure have unchanged structure 1`] = `
+<div
+  className="Subscription"
+>
+  <Connect(SubscriptionDecorator)
+    attRoute={[Function]}
+    sprintRoute={[Function]}
+  />
+  <div
+    className="linkList"
+  >
+    <Connect(Link)
+      className="subscriptionLink"
+    >
+      <Box>
+        <img
+          src="add_green_circle.svg"
+        />
+        Select plan
+      </Box>
+    </Connect(Link)>
+  </div>
+</div>
+`;

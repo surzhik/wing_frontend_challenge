@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Insurance Confirmation Insurance Confirmation structure have unchanged structure 1`] = `
+<div>
+  <Connect(SubscriptionDecorator)
+    attRoute={[Function]}
+    sprintRoute={[Function]}
+  />
+  <div
+    className="Back"
+  >
+    <Back
+      to={
+        Object {
+          "id": "ATT_INSURANCE_PLAN",
+          "params": Object {
+            "sku": undefined,
+            "subId": undefined,
+          },
+          "path": "/a/subscriptions/undefined/insurance/undefined/select-plan",
+          "type": "router/NAVIGATE",
+        }
+      }
+    />
+  </div>
+  <h1>
+    Confirm an insurance plan
+  </h1>
+  <Connect(InsurancePlanDecorator)
+    activating={false}
+    findInsurancePlan={[MockFunction]}
+    onConfirm={[Function]}
+  />
+</div>
+`;

@@ -9,7 +9,6 @@ export const findCurrent = findGenerator({
   endpoint: api.findCurrent,
   endpointArgs: (payload) => [payload.subId],
   transformResponse: (resp) => {
-    console.log(resp);
     return [{
       ...resp.data,
       id: resp.data.subscription

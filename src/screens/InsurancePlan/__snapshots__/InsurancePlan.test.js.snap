@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Insurance Plan Insurance Plan structure have unchanged structure 1`] = `
+<div>
+  <Connect(SubscriptionDecorator)
+    attRoute={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            undefined,
+          ],
+          Array [
+            undefined,
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    sprintRoute={[Function]}
+  />
+  <div
+    className="Back"
+  >
+    <Back />
+  </div>
+  <h1>
+    Select an insurance plan
+  </h1>
+  <div
+    className="plansHolder"
+  >
+    <PlanBox
+      index={0}
+      key="1"
+      onSelect={[Function]}
+      plan={
+        Object {
+          "id": 1,
+        }
+      }
+    />
+    <PlanBox
+      index={1}
+      key="2"
+      onSelect={[Function]}
+      plan={
+        Object {
+          "id": 2,
+        }
+      }
+    />
+    <PlanBox
+      index={2}
+      key="3"
+      onSelect={[Function]}
+      plan={
+        Object {
+          "id": 3,
+        }
+      }
+    />
+  </div>
+</div>
+`;

@@ -1,9 +1,9 @@
-import * as types from './types';
+import * as types from "./types";
 
 const initialState = {
   info: {},
   error: {}
-}
+};
 
 const notifications = (state = initialState, action) => {
   switch (action.type) {
@@ -14,7 +14,7 @@ const notifications = (state = initialState, action) => {
           ...state.info,
           [action.payload.key]: action.payload.message
         }
-      }
+      };
     case types.ERROR:
       return {
         ...state,
@@ -22,23 +22,23 @@ const notifications = (state = initialState, action) => {
           ...state.error,
           [action.payload.key]: action.payload.message
         }
-      }
+      };
     case types.CLEAR_INFO:
       const { [action.payload.key]: removedInfo, ...info } = state.info;
       return {
         ...state,
         info
-      }
+      };
     case types.CLEAR_ERROR:
       const { [action.payload.key]: removedError, ...error } = state.error;
       return {
         ...state,
         error
-      }
+      };
     default:
       return state;
   }
-}
+};
 
 export default notifications;
 

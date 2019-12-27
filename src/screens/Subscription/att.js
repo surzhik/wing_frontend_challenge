@@ -1,25 +1,29 @@
-import React from 'react';
-import SubscriptionSwitcher from 'subscriptions/SubscriptionSwitcher';
-import Box from 'common/Box';
-import Link from 'common/Link';
-import * as routes from 'app/routes';
-import add_green_circle from 'common/img/add_green_circle.svg';
-import styles from './Subscription.module.css';
+import { connect } from "react-redux";
+import * as routes from "app/routes";
 
-export const SubscriptionScreen = ({ subId }) => {
-  return (
-    <div className="Subscription">
-      <SubscriptionSwitcher attSubId={subId} attRoute={routes.attSubscription} sprintRoute={routes.sprintSubscription} />
-      <div className={styles.linkList}>
-        <Link className={styles.subscriptionLink} to={routes.attInsurance(subId)}>
-          <Box>
-            <img src={add_green_circle} />
-            Insurance
-          </Box>
-        </Link>
-      </div>
-    </div>
-  )
-}
+import Subscription from "./Subscription";
+import { fetchFiltered as fetchFilteredContracts } from "insurance/insuranceContracts/actions";
+import { getAttSubscription, getFilteredInsuranceContracts } from "reducers";
 
-export default SubscriptionScreen;
+const mapStateToProps = (state, ownProps) => {
+  const attSub = getAttSubscription(state, ownProps.subId);
+
+  const filteredContracts = getFilteredInsuranceContracts(state, {
+    att_subscription: ownProps.subId
+  });
+
+  return {
+    subActive: attSub && attSub.att_status === "active",
+    contracts: filteredContracts,
+    sku: attSub && attSub.device_specs,
+    navigateInsurancePlan: routes.attInsurancePlan,
+    navigateInsurance: routes.attInsurance,
+    subscription: 'att_subscription'
+  };
+};
+
+const mapDispatchToProps = {
+  fetchFilteredContracts
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Subscription);

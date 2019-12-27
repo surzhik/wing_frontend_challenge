@@ -14,6 +14,7 @@
     "jest-enzyme": "^7.0.0",
     "lodash": "^4.17.11",
     "moment": "^2.22.2",
+    "prettier": "^1.19.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
@@ -23,9 +24,11 @@
     "redux": "^4.0.0",
     "redux-form": "^7.4.2",
     "redux-form-saga": "^0.2.0",
+    "redux-mock-store": "^1.5.4",
     "redux-resource": "^3.0.4",
     "redux-saga": "^0.16.2",
-    "redux-saga-first-router": "0.0.18"
+    "redux-saga-first-router": "0.0.18",
+    "redux-saga-thunk": "^0.7.3"
   },
   "scripts": {
     "start": "react-scripts start",
